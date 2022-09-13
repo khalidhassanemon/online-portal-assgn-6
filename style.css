@@ -27,3 +27,18 @@
     margin-right: 200px;
     background-color: slateblue;
 }
+
+footer { 
+    margin-left: -12px;
+    margin-right: -12px;
+    border: 1px solid gray;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    bottom : 0;
+    height:60px;
+    margin-top : 50px;
+    text-align: center ;
+    font-size: 10px ;
+    font-family: 'Lato' ;
+}
