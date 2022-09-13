@@ -46,6 +46,7 @@
    <section>
     <div>
         <P id="count-field" class="p-4 shadow p-3 mb-5 mr-5 bg-slate-400 rounded"></P>
+            <!-- blog-data -->
         <div id="blog-2">
 
         </div>
@@ -53,11 +54,20 @@
    </section>
 
    <section class="container-2">
+
    <div id="news-container">
             
     </div>
 
    </section>
+   
+   <section id="loader" class="d-none">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+    </div>
+</section>
 
    <!-- modal-data -->
    <div class="modal fade" id="newsDetailModal" aria-labelledby="newsDetailModalLabel"
@@ -78,10 +88,7 @@
    </div>
 </div>
 
-<!-- blog-data -->
-<section>
 
-</section>
    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>

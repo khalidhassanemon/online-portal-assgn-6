@@ -41,5 +41,27 @@ const displayNewsDetails = (news) => {
             `
         newContainer.appendChild(newDetailsDiv);
     })
+    toggleSpinner(false);
 
+    const countField = document.getElementById('count-field')
+    if (count !== 0) {
+        countField.innerText = `${count} News found for category `
+    }
+    else {
+        countField.innerText = `No News Found`
+    }
+}
+
+document.getElementById('category-container').addEventListener('click', function(){
+    // Start spinner
+    toggleSpinner(true);
+})
+const toggleSpinner = (isLoading) => {
+    const loaderSection = document.getElementById('loader');
+    if(isLoading){
+        loaderSection.classList.remove("d-none");
+    }
+    else{
+        loaderSection.classList.add('d-none');
+    }
 }
