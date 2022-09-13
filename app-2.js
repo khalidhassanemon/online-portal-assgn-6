@@ -11,15 +11,15 @@ const newsItems = async(category_id) => {
 }
 
 const displayNewsDetails = (news) => {
-    news.sort(function (x, y) {return y.total_view - x.total_view })
     const newContainer = document.getElementById('news-container');
     newContainer.textContent = '';
     let count = 0;
     news.forEach(news => {
         count++;
         const newDetailsDiv = document.createElement('div');
+      newDetailsDiv.classList.add('container-2')
         newDetailsDiv.innerHTML = `
-            <div class="row p-4 shadow p-3 mb-5 bg-body rounded">
+            <div class="row p-4 shadow p-3 mb-5 mr-5 bg-slate-400 rounded">
                 <div class="col-md-3">
                     <img src="${news.thumbnail_url}" class="img-fluid rounded" alt="...">
                 </div>
@@ -32,7 +32,7 @@ const displayNewsDetails = (news) => {
                                 <img style="width: 50px; height:50px" class="rounded-circle" src="${news.author.img}" alt="">
                                 <p class="d-flex flex-column mx-2"> ${news.author.name} <small class="text-muted">${news.author.published_date}</small></p>
                             </div>
-                            <p>${news.total_view}</p>
+                            <p><i class="fa-solid fa-eye"></i>${news.total_view}</p>
                             <button onclick="loadNewsData('${news._id}')" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newsDetailModal">Show details</button>
                         </div>
                     </div>

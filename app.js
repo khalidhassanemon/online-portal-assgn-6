@@ -1,4 +1,4 @@
-const loadTitle = async() => {
+const loadCategory = async() => {
     const url = `https://openapi.programming-hero.com/api/news/categories`;
     try{
         const res = await fetch(url);
@@ -10,21 +10,18 @@ const loadTitle = async() => {
     }
 }
 
-const displayTitles = (titles) => {
-    const titleContainer = document.getElementById('category-container');
+const displayTitles = (cat) => {
+    const categoryContainer = document.getElementById('category-container');
     let i = 0;
-    titles.forEach(title => {
+    cat.forEach(title => {
         const titleList = document.createElement('div');
         titleList.innerHTML = `
-        <a onclick="newsItems('${title.category_id}')" id="item-${i}" class="nav-link active mx-2" aria-current="page" href="#">${title.category_name}</a>
+        <a onclick="newsItems('${title.category_id}')" class="mx-2" href="#">${title.category_name}</a>
         `
         i = i + 1;
-        titleContainer.appendChild(titleList);
+        categoryContainer.appendChild(titleList);
     });
-    // stop spinner
     
 }
 
-
-
-loadTitle();
+loadCategory();
