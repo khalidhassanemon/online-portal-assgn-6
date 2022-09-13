@@ -1,0 +1,19 @@
+.btn-1{
+    margin-left: 60px;
+}
+.part-2{
+    margin-left: 380px;
+}
+#category-container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+}
+.middle{
+    margin-top: 100px;
+    margin-left: 140px;
+}
+#count-field{
+    margin-left: 50px;
+    margin-right: 150px;
+}
